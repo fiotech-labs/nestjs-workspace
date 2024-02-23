@@ -1,0 +1,24 @@
+{
+  "name": "nestjs-workspace",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nestjs-workspace/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nestjs-workspace:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nestjs-workspace:build:development"
+        },
+        "production": {
+          "buildTarget": "nestjs-workspace:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
